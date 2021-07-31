@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="Imagenes/Icono.ico" />
+	<link rel="stylesheet" type="text/css" href="Estilos/estilos.css">
+	<title>CSS - ACERCA DE NOSOTROS</title>
+						<!-- SCRIPT  -->
+ <script>
+
+    function Comentario(){
+        var nombre=(document.getElementById("nombre").value).trim();   
+        var email=(document.getElementById("email").value).trim();   
+        var mensaje=(document.getElementById("mensaje").value).trim();   
+        if(nombre==""){
+            alert("Debes de ingresar el nombre");
+            return;
+        }else if(email==""){
+            alert("Debes de ingresar un correo electrónico");
+            return;
+        }else if(mensaje==""){
+            alert("Debes de ingresar el comentario");
+
+            return;
+
+        }
+        var tabla = document.getElementById("GenerarRegistros");
+        var fila=document.createElement("TR");
+        var columna=document.createElement("TD");
+        var columna2=document.createElement("TD");
+        var columna3=document.createElement("TD");
+        var filaNombre=document.createTextNode(nombre);
+        var filaEmail=document.createTextNode(email);
+        var filaComentario=document.createTextNode(mensaje);
+        columna.appendChild(filaNombre);
+        columna2.appendChild(filaComentario);
+        columna3.appendChild(filaEmail);
+        fila.appendChild(columna);
+        fila.appendChild(columna2);
+        fila.appendChild(columna3);
+        tabla.appendChild(fila);
+        //alert("Comentario agregado con éxito");
+        document.getElementById("nombre").value="";
+        document.getElementById("email").value="";
+        document.getElementById("mensaje").value="";
+
+    }
+    </script> 
+
+</head>
+<body>
+<br>
+<div class="blurred-bg-container">
+<div class="content">
+<br>
+<div class="table">
+<table border="1" cellspacing="0"  width="700 px" align="center">
+<tr>
+<td align="center" colspan="2" height="60 px" class="PrincipalTD"><a href="index.html"><img src="Imagenes\logo1.png" width="100 px" align="center"></a><h3>Noticias Impactantes de Guatemala</h3></td>	
+</tr>
+<tr>
+<td colspan="2" class="MenuHorinzontal" >
+
+<nav class="menu">
+<ul>
+<li><a href="index.html" class="circ">Inicio  | </a></li>
+<li><a href="contacto.html">Contacto  | </a></li>
+<li><a href="acerca.html">Acerca de Nosotros  | </a></li>
+<li><a href="nuestrosproductos.html">Nuestros Productos  | </a></li>
+<li><a href="comentarios.html">Comentarios  | </a></li>
+<li><a href="#">Busqueda : <INPUT TYPE=text id="s" name="q" value="" size="10"/></a></li>
+</ul>
+</nav>																																										
+</td>		
+</tr>
+
+<tr>
+	<td class="ArticuloTD">
+	<h4>&nbsp;&nbsp;<u>Contactenos </u></h4>
+	<p>ABC News es una división de la red de televisión y radio estadounidense, ABC, que es propiedad de The Walt Disney Company desde 1995. Su presidente es James Goldston. ABC News es la división de noticias de American Broadcasting Company.</p>
+	<p>Si desea contactarnos favor llenar la siguiente solicitud.</p>
+
+
+<main class="container">
+<label for="mail" style="font-size: 20px;">Nombre completo  :  </label><br><br>
+<input style="margin-left: 20px; width:350px;" placeholder="Nombre Completo" type="text" id="nombre"><br>
+<label for="mail" style="font-size: 20px;">Email   :     </label><br><br>
+<input style="margin-left: 20px; width:350px;" placeholder="alguien@example.com" type="email" id="email" >
+<br>
+<label for="mensaje" style="font-size: 20px;">Detalles:</label><br><br>
+<textarea style="margin-left: 20px; width:350px;" placeholder="Comentarios ..." id="mensaje"></textarea>
+<br><br>
+<button onclick="Comentario()" type="button" class="button" style="margin-left: 115px; width: 185px; color: white; background-color: #FA1A08; border-color: white;">Enviar comentarios</button>
+<br><br>
+<table id="GenerarRegistros">
+<hr> 
+<th>Nombre completo</th>
+<th>Email</th>
+<th>Detalles</th>
+</table>
+</main>
+</td>
+<style >
+    
+#GenerarRegistros{
+            background-color: white;
+    text-align: left;
+    border-collapse: collapse;
+    width: 100%;
+        }
+
+}
+#GenerarRegistros td{
+            border:solid;
+            width: 250px;
+            padding: 20px;
+
+        }
+
+#GenerarRegistros tr:hover td{
+    background-color: #369681;
+    color: white;
+}
+
+#GenerarRegistros th{
+            border:solid;
+            width: 250px;
+            padding: 2px;
+             background-color: #369681;
+             color: white;
+
+        }
+</style>
+
+
+
+<td VALIGN="TOP" width="160 px" class="ArticuloRelacionadosTD">
+<center>
+<strong>
+<p>Artículos</p>
+<p>Relacionados</p>
+</strong>
+</center>
+
+<ul class="ArticulosRelacionados">
+	<a href="https://cnnespanol.cnn.com/" target="_blank"><li>CNN</li></a>
+	<a href="https://www.bbc.com/mundo" target="_blank"><li>BBC</li></a>
+	<a href="https://www.nytimes.com/" target="_blank"><li>New York Times</li></a>
+</ul>
+</td>
+</tr>
+<tr>
+<td height="40 px" colspan="2" align="center" class="PieTD" ><sup><strong>©</strong></sup>Desarrollo Web UMG 2021</td>	
+</tr>
+	</table>
+	</div>
+	</div>
+</div>
+</body>
+</html>
